@@ -47,7 +47,7 @@ export class AwsMicroservicesStack extends cdk.Stack {
       ...nodeJSFunctionProps,
     })
 
-    productTable.grantReadData(productFunction);
+    productTable.grantReadWriteData(productFunction);
 
     // Product microservices api gateway
     // root name = product
